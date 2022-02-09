@@ -1,0 +1,79 @@
+.body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.playerWinner{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3rem;
+}
+
+.reset{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.Board{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    border: 1px solid black;
+    pointer-events: none;
+    background-image: url("/public/grid.png");
+}
+
+.SquareTiles{
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.player2{
+    margin-top: 1rem;
+    margin-left: 1.2rem;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    border: 10px solid black;
+    box-shadow: 0 5px 5px rgb(0, 0, 0, 0.5);
+}
+
+.player1 {
+   position: relative;
+}
+
+.player1::before {
+    content: "";
+    position: absolute; 
+    left: 43px;
+    height: 90px;
+    width: 15px;
+    margin-top: 1.5px;
+    background: black;
+    box-shadow: 0 5px 5px rgb(0, 0, 0, 0.5);
+    transform:rotate(45deg);
+    
+}
+
+.player1::after {
+    content: "";
+    position: absolute;    
+    left: 40px;
+    height: 90px;
+    width: 15px;
+    margin-top: 1.5px;
+    background: black;
+    box-shadow: 0 5px 5px rgb(0, 0, 0, 0.5);
+    transform:rotate(-45deg);
+}
